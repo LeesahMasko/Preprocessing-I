@@ -56,4 +56,28 @@ table {
 html, body {
     height: 100%;
 }
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|PT+Mono&display=swap');
+//variables 
+@main-color:##669900;
+@hover-color:#80979d;
+@main-font:'PT Mono', monospace;  /*#d1a87e*/
+@title-font:'Open Sans Condensed', sans-serif;
+// mix-ins
+.center(){ //we want the parethesis because we want this mixin to be consumed by the compiler
+  display:flex;
+  justify-content:center;
+  background-color:@hover-color;
+}
+.border(){
+  border: 2px dotted green;
+  padding: 2%;
+}
+body{
+	background-color: @main-color;
+	font-family:@main-font;
+  }
+  h1, h2, h3, h4, h5 {
+	font-size: 2rem;
+	font-family:@title-font;
+  }
 
